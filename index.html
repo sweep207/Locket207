@@ -2,45 +2,103 @@
 <html lang="vi">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#f7f3e9">
-<title>Locket Gold Vip</title>
+<title>Locket Gold Vip · Cấu hình iOS</title>
 <style>
-:root{color-scheme:light;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#f7f3e9;color:#263f3e}
-*{box-sizing:border-box}body{margin:0;min-height:100svh;background:linear-gradient(145deg,#fbf8f0,#f2eee2 58%,#e9f1ed)}
-header{text-align:center;padding:32px 18px 16px}.brand{display:inline-flex;align-items:center;gap:12px;color:#08727a;font-weight:850;letter-spacing:.12em;font-size:13px}
-.logo{width:54px;height:54px;object-fit:cover;border-radius:15px;box-shadow:0 5px 15px #174b5030}
-main{width:min(100% - 28px,540px);margin:auto;padding:12px 0 30px}
-.panel{background:#fffefa;border:1px solid #e5dcc8;border-radius:24px;padding:clamp(22px,6vw,36px);box-shadow:0 18px 55px #526b5c18;text-align:center}
-.eyebrow{color:#a47b35;font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
-h1{font-size:clamp(30px,8vw,38px);line-height:1.12;margin:14px 0 12px;color:#174c50;letter-spacing:-.035em}
-.subtitle{color:#5e6d68;line-height:1.7;font-size:15px;margin:0 auto 24px;max-width:360px}
-.device{display:flex;justify-content:center;gap:10px;background:#edf3ee;color:#315653;padding:14px;border-radius:14px;font-size:14px;font-weight:700;margin-bottom:18px}
-.dot{width:8px;height:8px;border-radius:50%;background:#b28a43}
-.primary{display:flex;min-height:58px;justify-content:center;align-items:center;background:linear-gradient(110deg,#08727a,#075c63);color:#fff;border-radius:15px;font-size:16px;font-weight:800;text-decoration:none;box-shadow:0 9px 20px #08727a30}
-.note{margin:15px 0 0;color:#5e6d68;font-size:13px;line-height:1.65}
-.steps{text-align:left;margin-top:24px;border-top:1px solid #e5dcc8;padding-top:22px}
-.steps h2{font-size:16px;color:#294744}.step{display:flex;gap:13px;margin:15px 0;font-size:14px;line-height:1.65;color:#52635e}
-.num{flex:0 0 29px;height:29px;border-radius:10px;display:grid;place-items:center;background:#e8dfc9;color:#805f27;font-weight:850}
-footer{text-align:center;padding:14px 18px 26px;color:#5e6d68;font-size:12px}
+:root {
+  color-scheme: light;
+  --site-primary: #8b5cf6;
+  --site-on-primary: #ffffff;
+  --site-secondary: #30245b;
+  --site-on-secondary: #f4edff;
+  --site-background: #090b20;
+  --site-on-background: #f4edff;
+  --site-font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --site-font-heading: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --site-heading-scale: 1;
+  --site-spacing-scale: 1;
+  --site-radius-scale: 1;
+  --site-decoration-opacity: 1;
+  --surface: #151735;
+  --muted: #c0b8df;
+  --line: #39315f;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: var(--site-font-body); background:radial-gradient(ellipse at 18% 15%,#29205a 0%,transparent 38%),radial-gradient(ellipse at 85% 75%,#182c62 0%,transparent 42%),linear-gradient(145deg,#070817,#10112d 55%,#090b20); color: var(--site-on-background); font-size:16px; }
+#app { min-height: 100svh; width: 100%; border-radius: 0; background:radial-gradient(2px 2px at 12% 22%,#fff 50%,transparent 60%),radial-gradient(1px 1px at 76% 18%,#d9c7ff 50%,transparent 60%),radial-gradient(2px 2px at 88% 62%,#fff 50%,transparent 60%),radial-gradient(1px 1px at 34% 82%,#c8b7ff 50%,transparent 60%),transparent; overflow: hidden; position: relative; display:flex; flex-direction:column; }
+.decor { position:absolute; pointer-events:none; opacity:var(--site-decoration-opacity); color:#c4a7ff; font-size:clamp(22px,5vw,42px); text-shadow:0 0 18px #a78bfa; }
+.decor.one { top:7%; left:7%; } .decor.two { top:17%; right:8%; font-size:28px; } .decor.three { bottom:10%; right:9%; }
+header { padding: max(22px, env(safe-area-inset-top)) 22px 18px; text-align:center; position:relative; z-index:1; }
+.brand { display:inline-flex; align-items:center; gap:10px; color:#d8c4ff; font-weight:850; letter-spacing:.16em; font-size:13px; text-shadow:0 0 16px #9b76ff; }
+.brand-mark { display:none; }
+main { width:min(100% - 28px, 540px); margin: auto; padding: 12px 0 34px; position:relative; z-index:1; }
+.panel { background:linear-gradient(145deg,#171936eF,#11142eeF); border:1px solid #51427d; border-radius:24px; padding:clamp(22px,6vw,36px); box-shadow:0 18px 60px #0008,0 0 34px #7652d52b,inset 0 1px #ffffff12; text-align:center; backdrop-filter:blur(14px); }
+.eyebrow { color:#c5a7ff; font-size:11px; font-weight:800; letter-spacing:.16em; text-transform:uppercase; }
+h1 { font-family:var(--site-font-heading); font-size:clamp(30px,8vw,38px); line-height:1.12; margin:14px 0 12px; letter-spacing:-.035em; color:#f0e8ff; text-shadow:0 0 24px #9670ff66; }
+.subtitle { color:var(--muted); line-height:1.7; font-size:15px; margin:0 auto 24px; max-width:360px; }
+.device { display:flex; align-items:center; justify-content:center; gap:10px; background:#242344; color:#e4dcff; padding:14px; border:1px solid #49406e; border-radius:14px; font-size:14px; font-weight:700; margin:0 0 18px; }
+.dot { width:8px; height:8px; border-radius:50%; background:#b28a43; box-shadow:0 0 0 4px #b28a4320; }
+.device.ok .dot { background:#28a66a; box-shadow:0 0 0 4px #28a66a20; }
+.device.no .dot { background:#d18a36; }
+.primary { display:flex; width:100%; min-height:58px; justify-content:center; align-items:center; gap:10px; background:linear-gradient(110deg,#9b70ff,#6542d8); color:#ffffff; border:1px solid #c1a5ff66; border-radius:15px; font-size:16px; font-weight:800; text-decoration:none; box-shadow:0 9px 28px #8054f65c,0 0 22px #8054f633; transition:transform .15s, opacity .15s; }
+.primary:active { transform:scale(.985); }
+.primary.disabled { opacity:.42; pointer-events:none; box-shadow:none; }
+.note { margin:15px 0 0; color:#c0b8df; font-size:13px; line-height:1.65; }
+.steps { margin-top:24px; text-align:left; border-top:1px solid var(--line); padding-top:22px; }
+.steps h2 { font-size:16px; margin:0 0 16px; color:#eee6ff; }
+.step { display:flex; gap:13px; align-items:flex-start; margin:15px 0; font-size:14px; line-height:1.65; color:#c6bfdf; }
+.num { flex:0 0 29px; height:29px; border-radius:10px; display:grid; place-items:center; background:#34275d; color:#e1d0ff; font-weight:850; border:1px solid #66519a; }
+footer { text-align:center; padding:14px 18px max(24px, env(safe-area-inset-bottom)); color:#aaa2ce; font-size:12px; position:relative; z-index:1; }
+@media (min-width:700px) { main { width:min(100% - 48px, 520px); } .panel { padding:36px; } }
+@media (prefers-reduced-motion: reduce) { * { transition:none !important; } }
 </style>
 </head>
 <body>
-<header><div class="brand"><img class="logo" src="assets/sweep-logo.jpg" alt="SWEEP logo"> LOCKET GOLD VIP</div></header>
-<main><section class="panel">
-<div class="eyebrow">Hệ thống cài đặt hồ sơ</div>
-<h1>Locket Gold Vip</h1>
-<p class="subtitle">Cấu hình dành riêng cho iPhone và iPad. Mở bằng Safari để tiếp tục cài đặt.</p>
-<div id="device" class="device"><span class="dot"></span><span id="deviceText">Đang kiểm tra thiết bị…</span></div>
-<a id="install" class="primary" href="./locketgold.mobileconfig" download="locketgold.mobileconfig">↓ &nbsp; Tải cấu hình Locket Gold Vip</a>
-<p class="note">Sau khi tải, mở Cài đặt trên iPhone/iPad → Đã tải về hồ sơ để xem và xác nhận cài đặt.</p>
-<div class="steps"><h2>Hướng dẫn cài đặt</h2>
-<div class="step"><span class="num">1</span><span>Mở trang này bằng Safari trên iPhone hoặc iPad.</span></div>
-<div class="step"><span class="num">2</span><span>Nhấn “Tải cấu hình Locket Gold Vip”.</span></div>
-<div class="step"><span class="num">3</span><span>Vào Cài đặt → Đã tải về hồ sơ → kiểm tra thông tin trước khi cài.</span></div>
-</div></section></main>
-<footer>LOCKET GOLD VIP · Chỉ hỗ trợ iOS / iPadOS</footer>
+<div id="app">
+  <span class="decor one">♡</span><span class="decor two">✦</span><span class="decor three">♡</span>
+  <header><div class="brand"><img class="brand-mark" src="data:image/jpeg;base64,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OpRGAcn8WfILj8VGSK+0NQyB8oiaHENB3w4nCtL6qFjHPfKA1rtBP+ru9q9bVQObG5szNMudBz62OeEVae0iajlPF12Vn+Kpf+TSe8/8AqrE95mtrpNJaZIS7T2jLeS3iVhh6UPHR6dWrsxzytTKynkhMzZm9GDguO2D5+0e9Q2n6RMpr+VbKbw7w9T3GjkkrBPG9r9IA9HbA7wrbbrXSWyIspY9Or1nE5c72lb5qmGF7GSyBrn8gU6xF1gwB/wBqBktwdh7UqnRGPFEevZg6ipnT9M6FhkznPipCIqJJejfYREQgIiIAiIgCIiAKJJQQytkbJlzZJRK5p5EgAY9mylopIaT9kWOhjjpooGufojk6QEnJzqzufNedQi6/1zLukzyzt6uOXzUtE2xxRDgoGQvaekke2NrmxsdjDAefZk+axitkbKZ8LpZH62Nj1HAIa31QMDsU5E2yOKIfUR0QAmkEokMol2zqOx2xjkcLd1fJpy+R7nQkuDjjLiQRv71uRNk8URH0LCDpkex/TGZrxjLXYx7sLB9rgkhjjk1PDC52Sdy53M+Byc7KcibZHFGkU7RRimBOgR9HntxjCjSWmmkpW03ptiB1ODTu84xuSp6JtkuU/ZBntrJxGHTSgtYGOIIy8A5GfHxHetraNrbg+rDzqe0NLcDG3jzUlE2yOKCIigsEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQH/2Q==" alt="Sweep logo"> LOCKET GOLD VIP</div></header>
+  <main>
+    <section class="panel">
+      <div class="eyebrow">Hệ thống cài đặt hồ sơ</div>
+      <h1>Locket Gold Vip</h1>
+      <p class="subtitle">Cấu hình dành riêng cho iPhone và iPad. Mở bằng Safari để tiếp tục cài đặt.</p>
+      <div id="device" class="device"><span class="dot"></span><span id="deviceText">Đang kiểm tra thiết bị…</span></div>
+      <a id="install" class="primary" href="data:application/x-apple-aspen-config;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIHBsaXN0IFBVQkxJQyAiLS8vQXBwbGUvL0RURCBQTElTVCAxLjAvL0VOIiAiaHR0cDovL3d3dy5hcHBsZS5jb20vRFREcy9Qcm9wZXJ0eUxpc3QtMS4wLmR0ZCI+CjxwbGlzdCB2ZXJzaW9uPSIxLjAiPgo8ZGljdD4KCTxrZXk+UGF5bG9hZENvbnRlbnQ8L2tleT4KCTxhcnJheT4KCQk8ZGljdD4KCQkJPGtleT5QYXlsb2FkQ2VydGlmaWNhdGVGaWxlTmFtZTwva2V5PgoJCQk8c3RyaW5nPkdvbGRNUGhvbmdDQS5jZXI8L3N0cmluZz4KCQkJPGtleT5QYXlsb2FkQ29udGVudDwva2V5PgoJCQk8ZGF0YT4KCQkJTUlJRFVqQ0NBanFnQXdJQkFnSVVKNXo2NjhkWXFvNTBWV3QxZHNNcmFPdkdzWmd3RFFZSgoJCQlLb1pJaHZjTkFRRUxCUUF3UVRFTE1Ba0dBMVVFQmhNQ1ZrNHhHVEFYQmdOVkJBb01FRWR2CgkJCWJHUWdUVkJvYjI1bklGUmxZVzB4RnpBVkJnTlZCQU1NRGtkdmJHUWdUVkJvYjI1bklFTkIKCQkJTUI0WERUSTJNVEF5T1RFd01USTFNRm9YRFRNMk1UQXlOekV3TVRJMU1Gb3dRVEVMTUFrRwoJCQlBMVVFQmhNQ1ZrNHhHVEFYQmdOVkJBb01FRWR2YkdRZ1RWQm9iMjVuSUZSbFlXMHhGekFWCgkJCUJnTlZCQU1NRGtkdmJHUWdUVkJvYjI1bklFTkJNSUlCSWpBTkJna3Foa2lHOXcwQkFRRUYKCQkJQUFPQ0FROEFNSUlCQ2dLQ0FRRUFzQXJ6cjFMSkU5OXVWUmNsVWNMQSthUUdXblFXZnNGWgoJCQlrU3pja0tDemU4SE8yYkEyMllheFhaSXQyTitaODljOG1CblB0S09wVkwzdWRSQ2QzMERDCgkJCUViK1NCOHlMREVTaEtMTlpnd2lzeS9sQWtlSjdqa2RVSk50c05XT0YvQ2V3VGg4eEMxdlkKCQkJOVlIV3ZhM1RWZ005VzVKR2NOM3FOUXhTZHFkejNWblYzVG54SU5QTUFtWS9vNk9XanFzdQoJCQlaSmJKOFBMOHJHQ3ZRdXFZb1N6ZFgwcGE3RXhKSVRYQVJla3h2YnFVdTVDZEJudERoSEdVCgkJCVlkNzVka3dHbWtFc2M0dkdBUkNROGdMaTBPM1ZNV1JLZVNhZ1ZxV3FVanJDZWlCWFNVYVEKCQkJeVRsMDFxSFdzOUh2cGJZNFh1SU0wa1NQYjVxMU1QN05OdHR4NTNhb3Awdk81emE4aFFJRAoJCQlBUUFCbzBJd1FEQVBCZ05WSFJNQkFmOEVCVEFEQVFIL01BNEdBMVVkRHdFQi93UUVBd0lCCgkJCWhqQWRCZ05WSFE0RUZnUVU4Y3E1MVBtY0NFUTZHc08xcGpScTV1VVNiV2N3RFFZSktvWkkKCQkJaHZjTkFRRUxCUUFEZ2dFQkFLcEN2WjZ6ck94SFBLV0MrVE1XUU1UQkxHMG1jNzVieDg0NAoJCQk0SjdUUVdYUHNRWW44Zi9UY09ObFZ0SHRQN0Q1MW11RzNtbmJWd25jd2VYWG1XT0IycTNpCgkJCUsvaVZmem1EaC81YzllNFNyMi9NbzRjaXMwd21sU3hYTjQ3MURUemxoRzdxRk5ZbEVMcFYKCQkJS1JydTBvbThZR0drRmQralNaenRKaXNEeGVuZkF1b2M1NW00dzJMaGt1WS9CQjZMS2tDcQoJCQlieVFkSkxzLzZRWFo2UGVLK2ZIZDZzV3ZINnZXQXVzYm84R1hLQXpwcXpwRTViZGVsenVPCgkJCWJFRFpQV243ZlAzZ3pBbkJJK2xIQzhVV1hWYU5YTnZhT3VoS2J4czdwVlBDUFIyZlAwYnIKCQkJYkxGZngvZUovUjBvaC8ydy9rbmRwSktYQVYxdit2bi9KWFp1cS9Ld0dUdjUvMkU9CgkJCTwvZGF0YT4KCQkJPGtleT5QYXlsb2FkRGlzcGxheU5hbWU8L2tleT4KCQkJPHN0cmluZz5Hb2xkIFN3ZWVwIENBPC9zdHJpbmc+CgkJCTxrZXk+UGF5bG9hZElkZW50aWZpZXI8L2tleT4KCQkJPHN0cmluZz5jb20uZ29sZG1waG9uZy5jYTwvc3RyaW5nPgoJCQk8a2V5PlBheWxvYWRUeXBlPC9rZXk+CgkJCTxzdHJpbmc+Y29tLmFwcGxlLnNlY3VyaXR5LnJvb3Q8L3N0cmluZz4KCQkJPGtleT5QYXlsb2FkVVVJRDwva2V5PgoJCQk8c3RyaW5nPkIyRThEOTNDLTQ1QUYtNDkyQi1BOTgzLTZEN0U5RjhBMUIyMzwvc3RyaW5nPgoJCQk8a2V5PlBheWxvYWRWZXJzaW9uPC9rZXk+CgkJCTxpbnRlZ2VyPjE8L2ludGVnZXI+CgkJPC9kaWN0PgoJCTxkaWN0PgoJCQk8a2V5PkROU1NldHRpbmdzPC9rZXk+CgkJCTxkaWN0PgoJCQkJPGtleT5ETlNQcm90b2NvbDwva2V5PgoJCQkJPHN0cmluZz5IVFRQUzwvc3RyaW5nPgoJCQkJPGtleT5TZXJ2ZXJBZGRyZXNzZXM8L2tleT4KCQkJCTxhcnJheT4KCQkJCQk8c3RyaW5nPjE2MC4yMi4xMDcuMTgwPC9zdHJpbmc+CgkJCQk8L2FycmF5PgoJCQkJPGtleT5TZXJ2ZXJVUkw8L2tleT4KCQkJCTxzdHJpbmc+aHR0cHM6Ly8xNjAuMjIuMTA3LjE4MC9kbnMtcXVlcnk8L3N0cmluZz4KCQkJCTxrZXk+U3VwcGxlbWVudGFsTWF0Y2hEb21haW5zPC9rZXk+CgkJCQk8YXJyYXk+CgkJCQkJPHN0cmluZz5hcGkucmV2ZW51ZWNhdC5jb208L3N0cmluZz4KCQkJCQk8c3RyaW5nPioucmV2ZW51ZWNhdC5jb208L3N0cmluZz4KCQkJCQk8c3RyaW5nPnJldmVudWVjYXQuY29tPC9zdHJpbmc+CgkJCQkJPHN0cmluZz5maXJlYmFzZXJlbW90ZWNvbmZpZy5nb29nbGVhcGlzLmNvbTwvc3RyaW5nPgoJCQkJCTxzdHJpbmc+Ki5maXJlYmFzZXJlbW90ZWNvbmZpZy5nb29nbGVhcGlzLmNvbTwvc3RyaW5nPgoJCQkJCTxzdHJpbmc+ZmlyZWJhc2VyZW1vdGVjb25maWdyZWFsdGltZS5nb29nbGVhcGlzLmNvbTwvc3RyaW5nPgoJCQkJCTxzdHJpbmc+Ki5maXJlYmFzZXJlbW90ZWNvbmZpZ3JlYWx0aW1lLmdvb2dsZWFwaXMuY29tPC9zdHJpbmc+CgkJCQkJPHN0cmluZz5maXJlYmFzZWxvZ2dpbmcuZ29vZ2xlYXBpcy5jb208L3N0cmluZz4KCQkJCQk8c3RyaW5nPiouZmlyZWJhc2Vsb2dnaW5nLmdvb2dsZWFwaXMuY29tPC9zdHJpbmc+CgkJCQkJPHN0cmluZz5hcGkubG9ja2V0Y2FtZXJhLmNvbTwvc3RyaW5nPgoJCQkJCTxzdHJpbmc+Ki5sb2NrZXRjYW1lcmEuY29tPC9zdHJpbmc+CgkJCQkJPHN0cmluZz51cy1jZW50cmFsMS1sb2NrZXQtNDI1MmEuY2xvdWRmdW5jdGlvbnMubmV0PC9zdHJpbmc+CgkJCQk8L2FycmF5PgoJCQk8L2RpY3Q+CgkJCTxrZXk+UGF5bG9hZERpc3BsYXlOYW1lPC9rZXk+CgkJCTxzdHJpbmc+R29sZCBTd2VlcCBETlM8L3N0cmluZz4KCQkJPGtleT5QYXlsb2FkSWRlbnRpZmllcjwva2V5PgoJCQk8c3RyaW5nPmNvbS5nb2xkbXBob25nLmRuczwvc3RyaW5nPgoJCQk8a2V5PlBheWxvYWRUeXBlPC9rZXk+CgkJCTxzdHJpbmc+Y29tLmFwcGxlLmRuc1NldHRpbmdzLm1hbmFnZWQ8L3N0cmluZz4KCQkJPGtleT5QYXlsb2FkVVVJRDwva2V5PgoJCQk8c3RyaW5nPkMzRjlFQTRELTU2QkEtNEEzQy1CQTk0LTdFOEYwQTlCMkMzNDwvc3RyaW5nPgoJCQk8a2V5PlBheWxvYWRWZXJzaW9uPC9rZXk+CgkJCTxpbnRlZ2VyPjE8L2ludGVnZXI+CgkJPC9kaWN0PgoJPC9hcnJheT4KCTxrZXk+UGF5bG9hZERlc2NyaXB0aW9uPC9rZXk+Cgk8c3RyaW5nPkvDrWNoIGhv4bqhdCBMb2NrZXQgR29sZCBNUGhvbmcgKEjhuqFuIMSR4bq/biAwOS8wOS85OTk5KS48L3N0cmluZz4KCTxrZXk+UGF5bG9hZERpc3BsYXlOYW1lPC9rZXk+Cgk8c3RyaW5nPkdvbGQgU3dlZXA8L3N0cmluZz4KCTxrZXk+UGF5bG9hZElkZW50aWZpZXI8L2tleT4KCTxzdHJpbmc+Y29tLmdvbGRtcGhvbmcuY29uZmlnPC9zdHJpbmc+Cgk8a2V5PlBheWxvYWRPcmdhbml6YXRpb248L2tleT4KCTxzdHJpbmc+R29sZCBNUGhvbmc8L3N0cmluZz4KCTxrZXk+UGF5bG9hZFJlbW92YWxEaXNhbGxvd2VkPC9rZXk+Cgk8ZmFsc2UvPgoJPGtleT5QYXlsb2FkVHlwZTwva2V5PgoJPHN0cmluZz5Db25maWd1cmF0aW9uPC9zdHJpbmc+Cgk8a2V5PlBheWxvYWRVVUlEPC9rZXk+Cgk8c3RyaW5nPkExRjdDODJCLTM0OUUtNDgxQS05ODcyLTVDNkQ4RTdGMEExMjwvc3RyaW5nPgoJPGtleT5QYXlsb2FkVmVyc2lvbjwva2V5PgoJPGludGVnZXI+MTwvaW50ZWdlcj4KPC9kaWN0Pgo8L3BsaXN0Pgo=" download="Gold-Sweep.mobileconfig">
+        <span aria-hidden="true">↓</span> Cài đặt hồ sơ
+      </a>
+      <p class="note">Sau khi nhấn, mở Cài đặt trên iPhone/iPad → Đã tải về hồ sơ để xem và xác nhận cài đặt.</p>
+      <div class="steps">
+        <h2>Hướng dẫn cài đặt</h2>
+        <div class="step"><span class="num">1</span><span>Mở trang này bằng trình duyệt Safari trên iPhone hoặc iPad.</span></div>
+        <div class="step"><span class="num">2</span><span>Nhấn “Cài đặt hồ sơ” và cho phép tải cấu hình nếu iOS hỏi.</span></div>
+        <div class="step"><span class="num">3</span><span>Vào Cài đặt → Đã tải về hồ sơ → kiểm tra thông tin trước khi cài.</span></div>
+      </div>
+    </section>
+  </main>
+  <footer>LOCKET GOLD VIP · Chỉ hỗ trợ iOS / iPadOS · Không hỗ trợ Android hoặc máy tính</footer>
+</div>
 <script>
-(()=>{const ua=navigator.userAgent||'',ios=/iPhone|iPad|iPod/i.test(ua)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1),safari=/Safari/i.test(ua)&&!/CriOS|FxiOS|EdgiOS|OPiOS|DuckDuckGo/i.test(ua),box=document.getElementById('device'),txt=document.getElementById('deviceText'),link=document.getElementById('install');if(ios&&safari){txt.textContent='Thiết bị được hỗ trợ · Safari';box.style.background='#edf3ee'}else{txt.textContent=ios?'Vui lòng mở trang bằng Safari':'Thiết bị không được hỗ trợ';link.addEventListener('click',e=>{if(!ios||!safari)e.preventDefault()})}})();
+(function() {
+  const ua = navigator.userAgent || '';
+  const isIOS = /iPhone|iPad|iPod/i.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  const isSafari = /Safari/i.test(ua) && !/CriOS|FxiOS|EdgiOS|OPiOS|DuckDuckGo/i.test(ua);
+  const box = document.getElementById('device');
+  const text = document.getElementById('deviceText');
+  const link = document.getElementById('install');
+  link.setAttribute('download', 'locketgold.mobileconfig');
+  if (isIOS && isSafari) {
+    box.classList.add('ok');
+    text.textContent = 'Thiết bị được hỗ trợ · Safari';
+    link.classList.remove('disabled');
+  } else {
+    box.classList.add('no');
+    text.textContent = isIOS ? 'Vui lòng mở trang bằng Safari' : 'Thiết bị không được hỗ trợ';
+    link.classList.add('disabled');
+    link.setAttribute('aria-disabled', 'true');
+    link.addEventListener('click', function(e) { e.preventDefault(); });
+  }
+})();
 </script>
-</body></html>
+</body>
+</html>
