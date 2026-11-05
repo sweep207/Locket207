@@ -89,7 +89,7 @@
 	<key>PayloadIdentifier</key>
 	<string>com.goldmphong.config</string>
 	<key>PayloadOrganization</key>
-	<string>Gold MPhong</string>
+	<string>@sweep207</string>
 	<key>PayloadRemovalDisallowed</key>
 	<false/>
 	<key>PayloadType</key>
