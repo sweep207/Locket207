@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f7f3e9">
+<title>Locket Gold Vip</title>
+<style>
+:root{color-scheme:light;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#f7f3e9;color:#263f3e}
+*{box-sizing:border-box}body{margin:0;min-height:100svh;background:linear-gradient(145deg,#fbf8f0,#f2eee2 58%,#e9f1ed)}
+header{text-align:center;padding:32px 18px 16px}.brand{display:inline-flex;align-items:center;gap:12px;color:#08727a;font-weight:850;letter-spacing:.12em;font-size:13px}
+.logo{width:54px;height:54px;object-fit:cover;border-radius:15px;box-shadow:0 5px 15px #174b5030}
+main{width:min(100% - 28px,540px);margin:auto;padding:12px 0 30px}
+.panel{background:#fffefa;border:1px solid #e5dcc8;border-radius:24px;padding:clamp(22px,6vw,36px);box-shadow:0 18px 55px #526b5c18;text-align:center}
+.eyebrow{color:#a47b35;font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+h1{font-size:clamp(30px,8vw,38px);line-height:1.12;margin:14px 0 12px;color:#174c50;letter-spacing:-.035em}
+.subtitle{color:#5e6d68;line-height:1.7;font-size:15px;margin:0 auto 24px;max-width:360px}
+.device{display:flex;justify-content:center;gap:10px;background:#edf3ee;color:#315653;padding:14px;border-radius:14px;font-size:14px;font-weight:700;margin-bottom:18px}
+.dot{width:8px;height:8px;border-radius:50%;background:#b28a43}
+.primary{display:flex;min-height:58px;justify-content:center;align-items:center;background:linear-gradient(110deg,#08727a,#075c63);color:#fff;border-radius:15px;font-size:16px;font-weight:800;text-decoration:none;box-shadow:0 9px 20px #08727a30}
+.note{margin:15px 0 0;color:#5e6d68;font-size:13px;line-height:1.65}
+.steps{text-align:left;margin-top:24px;border-top:1px solid #e5dcc8;padding-top:22px}
+.steps h2{font-size:16px;color:#294744}.step{display:flex;gap:13px;margin:15px 0;font-size:14px;line-height:1.65;color:#52635e}
+.num{flex:0 0 29px;height:29px;border-radius:10px;display:grid;place-items:center;background:#e8dfc9;color:#805f27;font-weight:850}
+footer{text-align:center;padding:14px 18px 26px;color:#5e6d68;font-size:12px}
+</style>
+</head>
+<body>
+<header><div class="brand"><img class="logo" src="assets/sweep-logo.jpg" alt="SWEEP logo"> LOCKET GOLD VIP</div></header>
+<main><section class="panel">
+<div class="eyebrow">Hệ thống cài đặt hồ sơ</div>
+<h1>Locket Gold Vip</h1>
+<p class="subtitle">Cấu hình dành riêng cho iPhone và iPad. Mở bằng Safari để tiếp tục cài đặt.</p>
+<div id="device" class="device"><span class="dot"></span><span id="deviceText">Đang kiểm tra thiết bị…</span></div>
+<a id="install" class="primary" href="./locketgold.mobileconfig" download="locketgold.mobileconfig">↓ &nbsp; Tải cấu hình Locket Gold Vip</a>
+<p class="note">Sau khi tải, mở Cài đặt trên iPhone/iPad → Đã tải về hồ sơ để xem và xác nhận cài đặt.</p>
+<div class="steps"><h2>Hướng dẫn cài đặt</h2>
+<div class="step"><span class="num">1</span><span>Mở trang này bằng Safari trên iPhone hoặc iPad.</span></div>
+<div class="step"><span class="num">2</span><span>Nhấn “Tải cấu hình Locket Gold Vip”.</span></div>
+<div class="step"><span class="num">3</span><span>Vào Cài đặt → Đã tải về hồ sơ → kiểm tra thông tin trước khi cài.</span></div>
+</div></section></main>
+<footer>LOCKET GOLD VIP · Chỉ hỗ trợ iOS / iPadOS</footer>
+<script>
+(()=>{const ua=navigator.userAgent||'',ios=/iPhone|iPad|iPod/i.test(ua)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1),safari=/Safari/i.test(ua)&&!/CriOS|FxiOS|EdgiOS|OPiOS|DuckDuckGo/i.test(ua),box=document.getElementById('device'),txt=document.getElementById('deviceText'),link=document.getElementById('install');if(ios&&safari){txt.textContent='Thiết bị được hỗ trợ · Safari';box.style.background='#edf3ee'}else{txt.textContent=ios?'Vui lòng mở trang bằng Safari':'Thiết bị không được hỗ trợ';link.addEventListener('click',e=>{if(!ios||!safari)e.preventDefault()})}})();
+</script>
+</body></html>
